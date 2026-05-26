@@ -550,7 +550,6 @@
     <a href="../index.html">&larr; Home</a>
     <a href="#dynamics">Dynamics</a>
     <a href="#demo">Noise Optimization</a>
-    <a href="#qual-results" class="nav-sub">Qualitative</a>
     <a href="#results-fig">Results</a>
     <a href="#steering" class="nav-sub">Steering</a>
     <a href="#failure" class="nav-sub">TPR vs TNR</a>
@@ -689,8 +688,9 @@
       </div>
     </div>
 
-    <!-- ── Qualitative Results ── -->
-    <div class="subsection" id="qual-results">
+      <!-- ── Main Results Figure ── -->
+      <span id="results"></span>
+        <div class="subsection" id="results-fig">
       <div class="subsection-title">Results — Steering Naughty Dubins Car World Model via Noise Optimization</div>
       <div class="subsection-subtitle">
         <p>Now, let’s steer the world model! We optimize the initial noise of the naughty Dubins car world model to maximize or minimize the safety margin: <span style="color:#e53935;font-weight:700">pessimistic</span> steering searches for worst-case outcomes, while <span style="color:#1e88e5;font-weight:700">optimistic</span> steering seeks best-case trajectories—both of which can be difficult to discover under uniform random initialization (gray points). For comparison, we also sample <i>N</i> = 20 random rollouts per scenario. Click <b>Refresh scenario</b> to load a new trajectory, or select any point in the noise scatter to visualize its rollout.</p>
@@ -745,23 +745,8 @@
       </div>
     </div>
 
-    <!-- ── Main Results Figure ── -->
-    <span id="results"></span>
-    <div class="subsection" id="results-fig">
-      <div class="subsection-title">Main Results</div>
-      <div class="subsection-subtitle">
-        <p>Noise optimization with the typical-set regularizer steers WM imaginations plausibly toward the failure set, robustly detecting possible failures that random generations miss.</p>
-      </div>
-      <div class="panel">
-        <div class="panel-header">Results: Naughty Dubins Car</div>
-        <div class="panel-body" style="text-align:center;padding:24px 18px">
-          <img src="../figures/dubins-main.png" style="max-width:100%;display:block;margin:0 auto;border-radius:6px" alt="Dubins Car Main Results Figure">
-        </div>
-        <div class="panel-caption">
-          <b>(a)</b> Average minimum safety score over imagined trajectories. Noise optimization with regularizer (orange) steers toward lower safety scores while staying within plausible bounds (dashed GT line). Noise optimization without the typical-set objective (teal) and classifier guidance (red) both drive the score below the GT bound—indicating physically implausible imaginations. <b>(b)</b> True positive rate (failure detection) vs. true negative rate (plausibility). Noise optimization with regularizer achieves accurate failure detection with near-nominal FPR. <b>(c)</b> Qualitative comparison of imagined trajectory distributions.
-        </div>
-      </div>
-    </div>
+
+
 
     <!-- ── Steering ── -->
     <div class="subsection" id="steering">
