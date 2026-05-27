@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steering Results</title>
+  <title>StressDream: Steering Video World Models for Robust Policy Evaluation and Improvement</title>
+  <meta name="description" content="Steering Video World Models for Robust Policy Evaluation and Improvement">
+  <meta name="keywords" content="video world models, world models, policy evaluation, policy learning and improvement, inference-time steering, robotics, robot learning, Vision-language-action models, adversarial scenario generation, diffusion models, machine learning, autonomous driving, robotic manipulation">
+  <meta name="author" content="Anonymous">
+  <meta property="og:title" content="StressDream: Steering Video World Models for Robust Policy Evaluation and Improvement">
+  <meta property="og:description" content="Steering Video World Models for Robust Policy Evaluation and Improvement">
+  <meta property="og:image" content="https://stressdream.github.io/icon.png">
+  <meta property="og:url" content="https://stressdream.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StressDream: Steering Video World Models for Robust Policy Evaluation and Improvement">
+  <meta name="twitter:description" content="Steering Video World Models for Robust Policy Evaluation and Improvement">
+  <meta name="twitter:image" content="https://stressdream.github.io/icon.png">
+  <link rel="canonical" href="https://stressdream.github.io">
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,6 +91,25 @@
       width: 3.5em; height: 3.5em;
       object-fit: contain;
     }
+    .hero-authors {
+      font-size: 1.2rem;
+      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+      margin: 0 auto 6px;
+      max-width: 680px;
+    }
+    .hero-authors a {
+      color: hsl(204, 86%, 53%);
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .hero-authors a:hover { text-decoration: underline; }
+    .hero-authors sup { font-size: 0.65em; }
+    .hero-affiliations {
+      font-size: 0.8rem; color: var(--text-dim);
+      margin: 0 auto 14px;
+      max-width: var(--max-w);
+    }
+    .hero-affiliations sup { font-size: 0.65em; }
     .hero p {
       font-size: 1rem; color: var(--text-sec);
       max-width: min(100%, 108ch);
@@ -430,16 +462,32 @@
 <!-- ═══ Hero ═══ -->
 <div class="hero">
   <h1><img class="hero-icon" src="icon.png" alt=""><span>StressDream: Steering Video World Models<br>for Robust Policy Evaluation and Improvement</span></h1>
-  <p>We present <strong>StressDream</strong>, an inference-time method that optimizes diffusion noise to steer video world models toward plausible, high-impact outcomes — enabling robust evaluation and improvement of robotic policies.</p>
+  <div class="hero-authors">
+    <a href="https://junwon.me/" target="_blank" rel="noopener noreferrer">Junwon Seo</a><sup>1</sup>,
+    <a href="https://sushantveer.github.io/" target="_blank" rel="noopener noreferrer">Sushant Veer</a><sup>2</sup>,
+    <a href="https://thomasrantian.github.io/" target="_blank" rel="noopener noreferrer">Ran Tian</a><sup>2</sup>,
+    <a href="https://wenhao.pub/" target="_blank" rel="noopener noreferrer">Wenhao Ding</a><sup>2</sup>,
+    <a href="https://research.nvidia.com/person/apoorva-sharma" target="_blank" rel="noopener noreferrer">Apoorva Sharma</a><sup>2</sup>,
+    <a href="https://faculty.washington.edu/kymleung/" target="_blank" rel="noopener noreferrer">Karen Leung</a><sup>2 3</sup>,
+    <a href="https://research.nvidia.com/person/ed-schmerling" target="_blank" rel="noopener noreferrer">Edward Schmerling</a><sup>2</sup>,
+    <a href="https://web.stanford.edu/~pavone/index.html" target="_blank" rel="noopener noreferrer">Marco Pavone</a><sup>2 4</sup>,
+    <a href="https://www.cs.cmu.edu/~abajcsy/" target="_blank" rel="noopener noreferrer">Andrea Bajcsy</a><sup>1</sup>
+  </div>
+  <div class="hero-affiliations">
+    <sup>1</sup> Carnegie Mellon University &nbsp;
+    <sup>2</sup> NVIDIA Research &nbsp;
+    <sup>3</sup> University of Washington &nbsp;
+    <sup>4</sup> Stanford University
+  </div>
   <div class="hero-links">
     <span class="hero-btn tentative">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      arXiv <span style="font-size:0.75em;font-weight:400">(tentative)</span>
+      arXiv <span style="font-size:0.75em;font-weight:400">(Coming Soon!)</span>
     </span>
-    <span class="hero-btn tentative">
+    <a class="hero-btn" href="https://github.com/CMU-IntentLab/StressDream" target="_blank" rel="noopener noreferrer">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      Code <span style="font-size:0.75em;font-weight:400">(tentative)</span>
-    </span>
+      Code &#8599;
+    </a>
     <a class="hero-btn" href="dubins/index.html">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3l-7 3.5a3 3 0 1 0 0 5L15 18a3 3 0 1 0 1-1.73l-7-3.5a3 3 0 0 0 0-2.54l7-3.5A3 3 0 1 0 18 3z"/></svg>
       Dubins Car Experiment &#8599;
@@ -452,6 +500,8 @@
   <div class="hero-video-wrap">
     <video src="video.mp4" controls autoplay muted loop playsinline></video>
   </div>
+  <br>
+  <p>We present <strong>StressDream</strong>, an inference-time method that optimizes diffusion noise to steer video world models toward plausible, high-impact outcomes — enabling robust evaluation and improvement of robotic policies.</p>
 </div>
 
 <!-- ═══ Content ═══ -->
@@ -1713,7 +1763,7 @@ function buildPolicyRollout() {
   section.className = 'section';
   section.id = 'policy-rollout';
   section.innerHTML = `<h2 class="section-title">2. Policy Improvement</h2>
-    <p class="section-subtitle">StressDream's robust evaluation capability leads to policy improvement. Weighting behavior cloning by video world model imaginations with steered rollouts promotes robust actions that avoid potential failures, improving a <a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener noreferrer">π₀.₅</a> VLA policy from <strong>39%→71%</strong> success rate, where nominal model often conducts risky actions. Rollout examples compare nominal vs. robust policies across tasks.</p>`;
+    <p class="section-subtitle">StressDream's robust evaluation leads to policy improvement. Weighting behavior cloning by video world model imaginations promotes robust actions that avoid potential failures, improving a <a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener noreferrer">π₀.₅</a> VLA policy from <strong>39%→71%</strong>.</p>`;
 
   // ── View toggle (above task selector) ──
   const viewRow = document.createElement('div');
@@ -2016,11 +2066,11 @@ function build() {
     <div class="contrib-grid">
       <div class="contrib-card">
         <div class="contrib-card-tag">Method</div>
-        <div class="contrib-card-body">We formalize the first <strong>inference-time steering method for video world models</strong>, optimizing initial diffusion noise toward plausible, high-impact outcomes via both semantic (with VLMs) and distributional (Gaussian typical-set) objectives.</div>
+        <div class="contrib-card-body">We formalize the first <strong>inference-time steering method for video world models</strong>, optimizing initial diffusion noise toward plausible, high-impact outcomes via both semantic (with VLMs) and plausibility (Gaussian typical-set) objectives.</div>
       </div>
       <div class="contrib-card">
-        <div class="contrib-card-tag">Policy Evaluation</div>
-        <div class="contrib-card-body"><strong>54%→94% failure-recall</strong> through video world model imaginations for robotic manipulation and autonomous driving. StressDream steers the video world model generations toward inference-time specified, scene-dependent critical outcomes only when they are plausible.</div>
+        <div class="contrib-card-tag">Robust Policy Evaluation</div>
+        <div class="contrib-card-body"><strong>54%→94% failure-detection</strong> through video world model imaginations. StressDream steers the video world model imaginations toward inference-time specified, scene-dependent outcomes that is high impact for the task.</div>
       </div>
       <div class="contrib-card">
         <div class="contrib-card-tag">Policy Improvement</div>
@@ -2037,7 +2087,7 @@ function build() {
   const s4 = document.createElement('div');
   s4.className = 'section'; s4.id = 'step-by-step';
   s4.innerHTML = `<h2 class="section-title">Method: Noise Optimization for Steering World Models</h2>
-    <p class="section-subtitle">We steer diffusion-based world model generations by optimizing the initial noise, leaving model weights unchanged. Because different initial noises yield different rollouts, gradient ascent on a criterion (e.g., a VLM score) can push the generation toward maximizing the score. However, the noise space is high-dimensional: its probability mass concentrates on a thin shell (the <em>typical set</em>), leaving the interior and the far exterior as low-density, out-of-distribution regions. Naive optimization without regularization drifts off this shell, producing implausible generations.</p>`;
+    <p class="section-subtitle">We steer diffusion-based world model generations by optimizing the initial noise. Because different initial noises yield different rollouts, gradient ascent on a criterion (e.g., a VLM score) can steer the generation. However, the noise space is high-dimensional: naive optimization without regularization drifts off the typical set, producing implausible generations.</p>`;
   s4.appendChild(buildStepByStep());
 
   const typicalBlurb = document.createElement('div');
@@ -2047,9 +2097,7 @@ function build() {
     <p style="font-size:0.88rem;color:var(--text-sec);line-height:1.7;margin:0 0 14px;">
        Although Gaussian density is highest at the mean, <strong>0</strong>, high-dimensional samples
   almost never look like the mean. They must also satisfy aggregate statistics of the prior,
-  such as having norm about &radic;<i>d</i>. Thus, shrinking diffusion noise toward zero may
-  increase density but make the noise atypical under the prior, pushing generation outside the
-  regime the model was trained on and leading to implausible outputs. See more details in the link below.
+  such as having norm about &radic;<i>d</i>. See more details in the link below.
     </p>`;
   s4.appendChild(typicalBlurb);
 
@@ -2064,7 +2112,7 @@ function build() {
   const sPolicyEval = document.createElement('div');
   sPolicyEval.className = 'section'; sPolicyEval.id = 'policy-eval';
   sPolicyEval.innerHTML = `<h2 class="section-title">1. Policy Evaluation</h2>
-    <p class="section-subtitle">StressDream steers WM imaginations conditioned on given action sequences toward plausible critical events defined by a inference-time text prompt describing the target event, enabling robust detection of failure-prone actions. </p>
+    <p class="section-subtitle">StressDream steers WM imaginations toward high-impact outcomes, enabling robust policy evaluation. </p>
     <div style="margin-bottom:4px;">
       <img src="figures/inner-opt.jpg" style="width:100%;border-radius:10px;" alt="Policy evaluation — StressDream vs. baselines">
     </div>`;
@@ -2130,7 +2178,7 @@ function build() {
   const rwTitle = document.createElement('h3');
   rwTitle.className = 'subsection-title'; rwTitle.textContent = 'Reward Function';
   const rwSub = document.createElement('p');
-  rwSub.className = 'subsection-subtitle'; rwSub.textContent = 'We compare the reward estimates on the generated rollouts. Only Qwen is used for the optimization, while the others are not used during the steering. It shows the rewards of the steered generations are lower than baselines, showing the steering can effectively guide the video world model to generate more task-failure events when the failure is plausible.';
+  rwSub.className = 'subsection-subtitle'; rwSub.textContent = 'We compare the reward estimates on the generated rollouts. Only Qwen is used for the optimization.';
   const rwHost = document.createElement('div');
   sq.appendChild(rwTitle); sq.appendChild(rwSub); sq.appendChild(rwHost);
   buildRewardCharts(rwHost);
@@ -2144,7 +2192,7 @@ function build() {
     <p class="section-subtitle">StressDream steers the <a href="https://opendrivelab.com/Vista/" target="_blank" rel="noopener noreferrer">Vista</a> driving world model toward safety-critical events across 8 categories (100 image–text pairs, PAI-AV dataset) and 200 imminent-collision examples (Nexar). Evaluated with WorldModelBench — target alignment scores whether the generated video matches the target event description; video quality serves as a proxy for plausibility.</p>
     <div style="margin-bottom:28px;text-align:center;">
       <img src="figures/vista-full-results.png" style="width:50%;border-radius:10px;display:block;margin:0 auto;" alt="Vista full results — StressDream vs. baselines">
-      <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;line-height:1.6;"><strong>Steering driving world models.</strong> StressDream steers Vista generations toward target safety-critical events more effectively than Best-of-<em>N</em> random sampling. The distributional objective preserves video quality while improving target alignment.</p>
+      <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;line-height:1.6;"><strong>Steering driving world models.</strong> StressDream steers Vista generations toward target safety-critical events more effectively than Best-of-<em>N</em> random sampling. The plausibility objective preserves video quality while improving target alignment.</p>
     </div>
     <div style="text-align:center;">
       <img src="figures/vista-longtail.png" style="width:40%;border-radius:10px;display:block;margin:0 auto;" alt="Long-tail event discovery">
@@ -2164,7 +2212,7 @@ function build() {
   const s3 = document.createElement('div');
   s3.className = 'section'; s3.id = 'driving-conditional';
   s3.innerHTML = `<h2 class="section-title">Robust Action Evaluation with Steering</h2>
-    <p class="section-subtitle">StressDream can robustly evaluate actions by steering the video world model toward safety-critical outcomes. <br> Nominal vs. steered rollouts using the <a href="https://opendrivelab.com/Vista/" target="_blank" rel="noopener noreferrer">Vista world model</a>, under different action choices per scenario. StressDream identifies which candidate actions lead to safety-critical outcomes, enabling robust action selection.</p>`;
+    <p class="section-subtitle">Nominal vs. steered rollouts using the <a href="https://opendrivelab.com/Vista/" target="_blank" rel="noopener noreferrer">Vista world model</a>.</p>`;
   s3.appendChild(buildDrivingCondPanel());
   root.appendChild(s3);
 
@@ -2174,7 +2222,7 @@ function build() {
   const piFig = document.createElement('div');
   piFig.style.cssText = 'margin-bottom:24px;';
   piFig.innerHTML = `<img src="figures/pi-qualitative.jpg" style="width:100%;border-radius:10px;" alt="Policy improvement qualitative results">
-    <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;line-height:1.6;"><strong>Policy improvement via robust evaluation.</strong> VLA policy finetuning with StressDream improves the <a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener noreferrer">π₀.₅</a> VLA policy robustly. Rollout examples compare nominal vs. robust policies across tasks.</p>`;
+    <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;line-height:1.6;"><strong>Policy improvement via robust evaluation.</strong> VLA policy finetuning with StressDream improves the <a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener noreferrer">π₀.₅</a> VLA policy robustly.</p>`;
   sPolicyImprove.insertBefore(piFig, sPolicyImprove.children[2]);
   root.appendChild(sPolicyImprove);
 
